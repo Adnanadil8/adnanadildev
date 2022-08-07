@@ -1,0 +1,376 @@
+﻿html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+// global styles mobile version
+body {
+    background: black;
+   margin: 0;
+   padding: 0;
+}
+
+ 
+.logo {
+    position: relative;
+    top: 0;
+    left: 1em;
+    width: auto;
+    height: auto;
+    padding: 1em;
+    text-transform: uppercase;
+    animation: logo 2s alternate infinite;
+
+
+    a {
+
+        color: lightseagreen;
+        text-decoration: none;
+        font-family: 'poppins', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.5em;
+
+        span {
+            color: red;
+        }
+
+    }
+}
+
+svg.menu {
+    margin: .5em;
+
+    stroke: white;
+
+    path {
+        fill: white;
+    }
+}
+
+
+    nav {
+        background: rgb(75, 105, 49);
+         position: fixed;
+         top: 0;
+         right: 0;
+         width: 50%;
+         height: 120vh;
+         z-index: 99;
+         text-transform: uppercase;
+         transform: translateX(100%);
+        transition: transform .8s ease-in ;
+        
+    
+         ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 8em;
+            
+    
+        
+    
+            a {
+                color: rgb(243, 237, 237);
+                text-decoration: none;
+                padding: 2em 3em;
+                display: block;
+    
+                &:hover {
+                    color: greenyellow;
+                    background: rgb(104, 62, 62);
+                }
+            }
+        }
+        
+    }
+
+    .close {
+        float: right;
+        width: 2em;
+        margin: 1.2em;
+    }
+
+header {
+    background: rgb(20, 20, 20);
+    width: auto;
+    height: auto;
+    margin: 0 0 6em 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    
+
+    svg {
+        width: 2em;
+        margin-top: -0.6em;
+        cursor: pointer;
+
+}   
+}
+
+main {
+    background: rgb(19, 19, 19);
+    display: block;
+    justify-content: center;
+    margin: 2%;
+    text-align: center;
+    
+.main {
+    transform: translateY(-50%,-50%);
+    background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+
+}
+
+    .intro {
+        display: grid;
+        justify-content: center;
+        margin: 2.5em;
+        padding: 2.5em;
+
+        img {
+            margin-top: 0;
+            border-radius: 50%;
+        }
+    }
+    
+}
+
+
+
+
+
+footer {
+    background: rgb(8, 8, 8);
+    display: grid;
+    justify-content: center;
+
+
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1.5rem;
+
+        .facebook {
+            stroke: rgb(56, 18, 224);
+            
+            path {
+                fill: #4911e2;
+            }
+        }
+
+        .instagram {
+            stroke: brown;
+            
+            path {
+                fill: #e7303f;
+            }
+            
+        }
+
+        
+
+
+
+        a {
+            margin: 2em;
+            padding: 1em;
+
+            // &:hover {
+                
+            // }
+        }
+    }
+
+
+    
+
+    .copywrite {
+        color: white;
+        text-align: center;
+        margin: 1em;
+        padding-left: 4em;
+    }
+}
+
+
+
+
+
+
+.open-nav {
+    transform: translateX(0);
+}
+
+
+
+
+
+
+// Home style
+
+
+
+    
+    
+
+// Work style
+
+#work {
+    color: white;
+    background: black;
+    padding: 2em;
+    margin-bottom: 2em;
+
+    .btn {
+        
+        a {
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            // &:hover {
+            //     color: whitesmoke;
+            //     background: rebeccapurple;
+            // }
+        }
+    }
+}
+
+
+
+// Projects style
+
+#project {
+    color: gainsboro;
+    background: none;
+    padding: 3em;
+    margin-bottom: 2em;
+
+    .btn{
+        a {
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            // &:hover {
+            //     color: whitesmoke;
+            //     background: rebeccapurple;
+            // }
+        }
+    }
+}
+
+// About style
+
+#main {
+    background: none;
+}
+
+.about {
+    text-align: center;
+    padding: 3em;
+    line-height: 1em;
+    margin-bottom: 2em;
+}
+
+.gradient {
+    transform: translateY(-50%,-50%);
+    background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+}
+
+
+
+// desktop version
+
+@media only screen and (min-width: 920px) {
+    nav {
+        transform: translateX(0);
+        position: unset;
+        width: auto;
+        height: auto;
+        background: none;
+        font-size: 16px;
+    
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0 2rem 0 0;
+
+            a {
+               color: lightblue;
+               background: none;
+
+               &:hover {
+                color: white;
+                background: none;
+                text-decoration: underline;
+               }
+            }
+        }
+
+    .close {
+            display: none;
+        }
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 920px) {
+    nav {
+       width: auto;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+   main { 
+
+    
+    .intro {
+        display: flex;
+        justify-content: flex-start;
+
+        img {
+            padding: 2em;
+        }
+    }
+
+    #work {
+       overflow: hidden;
+        img {
+            float: left;
+            top: 0;
+        }
+    }
+
+    #project {
+        overflow: hidden;
+        img {
+            float: left;
+            top: 0;
+        }
+    }
+}
+}
+
+
+// Animations
+
+@keyframes logo {
+    0% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}

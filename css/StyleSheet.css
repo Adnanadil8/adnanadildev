@@ -1,0 +1,272 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  position: relative;
+  top: 0;
+  left: 1em;
+  width: auto;
+  height: auto;
+  padding: 1em;
+  text-transform: uppercase;
+  -webkit-animation: logo 2s alternate infinite;
+          animation: logo 2s alternate infinite;
+}
+.logo a {
+  color: lightseagreen;
+  text-decoration: none;
+  font-family: "poppins", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5em;
+}
+.logo a span {
+  color: red;
+}
+
+svg.menu {
+  margin: 0.5em;
+  stroke: white;
+}
+svg.menu path {
+  fill: white;
+}
+
+nav {
+  background: rgb(75, 105, 49);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 120vh;
+  z-index: 99;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0.8s ease-in;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8em;
+}
+nav ul a {
+  color: rgb(243, 237, 237);
+  text-decoration: none;
+  padding: 2em 3em;
+  display: block;
+}
+nav ul a:hover {
+  color: greenyellow;
+  background: rgb(104, 62, 62);
+}
+
+.close {
+  float: right;
+  width: 2em;
+  margin: 1.2em;
+}
+
+header {
+  background: rgb(20, 20, 20);
+  width: auto;
+  height: auto;
+  margin: 0 0 6em 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+header svg {
+  width: 2em;
+  margin-top: -0.6em;
+  cursor: pointer;
+}
+
+main {
+  background: rgb(19, 19, 19);
+  display: block;
+  justify-content: center;
+  margin: 2%;
+  text-align: center;
+}
+main .main {
+  transform: translateY(-50%, -50%);
+  background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+main .intro {
+  display: grid;
+  justify-content: center;
+  margin: 2.5em;
+  padding: 2.5em;
+}
+main .intro img {
+  margin-top: 0;
+  border-radius: 50%;
+}
+
+footer {
+  background: rgb(8, 8, 8);
+  display: grid;
+  justify-content: center;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+footer ul .facebook {
+  stroke: rgb(56, 18, 224);
+}
+footer ul .facebook path {
+  fill: #4911e2;
+}
+footer ul .instagram {
+  stroke: brown;
+}
+footer ul .instagram path {
+  fill: #e7303f;
+}
+footer ul a {
+  margin: 2em;
+  padding: 1em;
+}
+footer .copywrite {
+  color: white;
+  text-align: center;
+  margin: 1em;
+  padding-left: 4em;
+}
+
+.open-nav {
+  transform: translateX(0);
+}
+
+#work {
+  color: white;
+  background: black;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+#work .btn a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#project {
+  color: gainsboro;
+  background: none;
+  padding: 3em;
+  margin-bottom: 2em;
+}
+#project .btn a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#main {
+  background: none;
+}
+
+.about {
+  text-align: center;
+  padding: 3em;
+  line-height: 1em;
+  margin-bottom: 2em;
+}
+
+.gradient {
+  transform: translateY(-50%, -50%);
+  background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+@media only screen and (min-width: 920px) {
+  nav {
+    transform: translateX(0);
+    position: unset;
+    width: auto;
+    height: auto;
+    background: none;
+    font-size: 16px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 2rem 0 0;
+  }
+  nav ul a {
+    color: lightblue;
+    background: none;
+  }
+  nav ul a:hover {
+    color: white;
+    background: none;
+    text-decoration: underline;
+  }
+  nav .close {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 920px) {
+  nav {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 920px) {
+  main .intro {
+    display: flex;
+    justify-content: flex-start;
+  }
+  main .intro img {
+    padding: 2em;
+  }
+  main #work {
+    overflow: hidden;
+  }
+  main #work img {
+    float: left;
+    top: 0;
+  }
+  main #project {
+    overflow: hidden;
+  }
+  main #project img {
+    float: left;
+    top: 0;
+  }
+}
+@-webkit-keyframes logo {
+  0% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes logo {
+  0% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}/*# sourceMappingURL=StyleSheet.css.map */
